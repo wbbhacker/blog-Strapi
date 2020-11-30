@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "tags",
+  "collectionName": "contacts",
   "info": {
-    "name": "tag"
+    "name": "contact"
   },
   "options": {
     "increments": true,
@@ -10,13 +10,17 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "title": {
+    "name": {
       "type": "string"
     },
-    "posts": {
-      "collection": "post",
-      "via": "tags",
-      "dominant": true
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
     }
   }
 }

@@ -11,11 +11,30 @@
   },
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "content": {
       "type": "richtext",
       "required": true
+    },
+    "cover": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "is_publish": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "tags": {
+      "via": "posts",
+      "collection": "tag"
     }
   }
 }
